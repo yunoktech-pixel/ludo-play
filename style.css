@@ -1,0 +1,71 @@
+:root {
+  --bg: #0a2463;
+  --bg-deep: #061536;
+  --card: #ffffff;
+  --text: #14204a;
+  --muted: #4f5b7a;
+  --accent: #1667db;
+  --line: #e2e7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card: #0f1e45;
+    --text: #e8edf8;
+    --muted: #aab6d3;
+    --accent: #6fb6ff;
+    --line: #22335f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: linear-gradient(180deg, #0e3a8c, var(--bg) 40%, var(--bg-deep)) fixed;
+  min-height: 100vh;
+}
+header {
+  text-align: center;
+  padding: 40px 16px 24px;
+  color: #fff;
+}
+header h1 { margin: 0; font-size: 2rem; letter-spacing: 0.5px; }
+header p { margin: 6px 0 0; color: #bfd3ff; }
+.logo { font-weight: 800; }
+.logo span:nth-child(1) { color: #ff6b5e; }
+.logo span:nth-child(2) { color: #5cd86e; }
+.logo span:nth-child(3) { color: #ffda4a; }
+.logo span:nth-child(4) { color: #55b0ff; }
+main {
+  max-width: 820px;
+  margin: 0 auto 40px;
+  padding: 28px 24px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 860px) { main { margin: 0 16px 32px; padding: 22px 18px; } }
+h2 { margin-top: 1.8em; font-size: 1.25rem; border-bottom: 2px solid var(--line); padding-bottom: 4px; }
+h2:first-of-type { margin-top: 0.4em; }
+h3 { font-size: 1.05rem; margin-bottom: 0.2em; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+a { color: var(--accent); }
+ul { padding-left: 1.3em; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--line); vertical-align: top; }
+th { background: rgba(22, 103, 219, 0.08); }
+.table-wrap { overflow-x: auto; }
+nav.links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 16px; }
+nav.links a {
+  color: #fff; text-decoration: none; font-weight: 600;
+  background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 16px; border-radius: 999px;
+}
+nav.links a:hover { background: rgba(255, 255, 255, 0.22); }
+footer { text-align: center; color: #bfd3ff; font-size: 0.9rem; padding: 0 16px 32px; }
+footer a { color: #fff; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.card { border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+.card h3 { margin-top: 0; }
